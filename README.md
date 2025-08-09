@@ -1,8 +1,14 @@
-# 아이바(Aiva) — 당신의 육아비서
+<h1 align="center" style="color:black; font-weight:bold;">
+  아이바(Aiva)
+</h1>
+
+<p align="center" style="color:gray; font-size:14px;">
+  당신의 육아비서
+</p>
+
 
 <p align="center">
   <img width="300" height="300" alt="aiva_name_image" src="https://github.com/user-attachments/assets/a3886fda-f091-42ae-94ac-6cbcdf98f89f" />
-  <br/>
   <img width="500" height="500" alt="aiva_logo" src="https://github.com/user-attachments/assets/74de9561-abea-4c44-8c40-6f35fb7a5fc9" />
 </p>
 
@@ -25,15 +31,9 @@
 - [주요 기능](#주요-기능)
 - [AI 서비스](#ai-서비스)
 - [시스템 아키텍처](#시스템-아키텍처)
-- [스크린샷](#스크린샷)
-- [빠른 시작](#빠른-시작)
 - [환경 변수](#환경-변수)
 - [API 개요](#api-개요)
 - [폴더 구조(예시)](#폴더-구조예시)
-- [로드맵](#로드맵)
-- [개인정보·면책](#개인정보면책)
-- [기여 방법](#기여-방법)
-- [라이선스](#라이선스)
 - [문의](#문의)
 
 ---
@@ -63,11 +63,15 @@
 ---
 
 ## 시스템 아키텍처
-```mermaid
-flowchart LR
-  U[사용자] -->|텍스트/음성| A[Flutter App]
-  A -->|HTTP/SSE| B[백엔드 (예: FastAPI)]
-  B -->|임베딩 쿼리| V[(Vector DB)]
-  B -->|프롬프트/완성 요청| O[OpenAI API]
-  V --> B
-  B -->|응답 스트리밍/완료| A --> U
+
+<p align="center">
+  <img width="2525" height="774" alt="aiva server architecture drawio" src="https://github.com/user-attachments/assets/45ac2b1a-7e93-45b3-ad5a-e95c4f089062" />
+</p>
+
+---
+
+## 폴더-구조예시
+
+<p align="center">
+  
+</p>
