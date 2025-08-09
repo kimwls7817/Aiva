@@ -12,7 +12,7 @@
   <img width="500" height="500" alt="aiva_logo" src="https://github.com/user-attachments/assets/74de9561-abea-4c44-8c40-6f35fb7a5fc9" />
 </p>
 
-<p align="center">
+<p align="left">
   <a href="#"><img alt="Status" src="https://img.shields.io/badge/status-alpha-blue"></a>
   <a href="#"><img alt="Hackathon" src="https://img.shields.io/badge/2025%20Seoul%20WomenTech-우다다-ff69b4"></a>
   <a href="#"><img alt="Flutter" src="https://img.shields.io/badge/app-Flutter-informational"></a>
