@@ -1,0 +1,15 @@
+test01/
+├── app.py
+├── chat_app.py
+├── README.md
+├── requirements.txt
+├── run_server.py
+├── server.py
+├── test01.py
+├── test_json.py
+├── aiva_app/
+│   └── lib/
+├── __pycache__/
+├── venv/                (Python 가상환경, 내부 파일 다수 — 생략)
+└── .prompts/            (숨김 폴더)
+    └── fewshot_examples.json
