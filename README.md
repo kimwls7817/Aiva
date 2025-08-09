@@ -72,5 +72,5 @@
 
 ## 폴더-구조예시
 
-<a><src="https://github.com/yejinKIM702/Aiva/yejinKIM702-patch-1.git">AIVA APP 프로젝트 구조도(트리)</a>
+<a src="https://github.com/yejinKIM702/Aiva/yejinKIM702-patch-1.git">AIVA APP 프로젝트 구조도(트리)</a>
 
