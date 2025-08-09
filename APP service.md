@@ -5,3 +5,9 @@
 <p align="center">
   전체 프로젝트 폴더를 확인하시고자 하신다면 아래의 repository link를 확인해주시기 바랍니다. 
 </p>
+
+<p align="center">
+  <a href="https://github.com/yejinKIM702/AivaApp.git" target="_blank">
+    📂 AivaApp GitHub Repository 바로가기
+  </a>
+</p>
