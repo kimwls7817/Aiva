@@ -73,5 +73,5 @@
 ## 폴더-구조예시
 
 <p align="center">
-  
+  yejinKIM702-patch-1
 </p>
