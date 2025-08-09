@@ -71,6 +71,8 @@
 ---
 
 ## 폴더-구조예시
+<img width="290" height="132" alt="image" src="https://github.com/user-attachments/assets/dcde9ee9-c83d-4719-9400-d15740cfd954" /></br>
+<img width="291" height="168.33" alt="image" src="https://github.com/user-attachments/assets/3a395d84-52ae-4863-8a88-a4b213aa9798" /></br>
+<img width="290" height="191" alt="image" src="https://github.com/user-attachments/assets/9a96d0de-76ad-4a23-81af-97f2195bc2a0" /></br>
 
-<a src="https://github.com/yejinKIM702/Aiva/yejinKIM702-patch-1.git">AIVA APP 프로젝트 구조도(트리)</a>
 
