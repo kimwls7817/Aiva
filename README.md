@@ -77,4 +77,10 @@
 <img width="437" height="253" alt="image" src="https://github.com/user-attachments/assets/3a395d84-52ae-4863-8a88-a4b213aa9798" /></br>
 <img width="436" height="287" alt="image" src="https://github.com/user-attachments/assets/9a96d0de-76ad-4a23-81af-97f2195bc2a0" /></br>
 
+---
+
+## 문의
+
+**이메일**
+- 우다다 팀메일: wudada0722@gmail.com
 
