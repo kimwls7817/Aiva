@@ -1,76 +1,69 @@
-<h1 align="center" style="color:black; font-weight:bold;">
-  아이바(Aiva)
-</h1>
+# Test01 Python 프로젝트
 
-<p align="center" style="color:gray; font-size:14px;">
-  당신의 육아비서
-</p>
+이 프로젝트는 Python 가상환경으로 설정된 기본 프로젝트입니다.
 
+## 설치 및 실행
 
-<p align="center">
-  <img width="300" height="300" alt="aiva_name_image" src="https://github.com/user-attachments/assets/a3886fda-f091-42ae-94ac-6cbcdf98f89f" />
-  <img width="500" height="500" alt="aiva_logo" src="https://github.com/user-attachments/assets/74de9561-abea-4c44-8c40-6f35fb7a5fc9" />
-</p>
+### 1. 가상환경 활성화
+```bash
+# Windows PowerShell
+.\venv\Scripts\Activate.ps1
 
-<p align="center">
-  <a href="#"><img alt="Status" src="https://img.shields.io/badge/status-alpha-blue"></a>
-  <a href="#"><img alt="Hackathon" src="https://img.shields.io/badge/2025%20Seoul%20WomenTech-우다다-ff69b4"></a>
-  <a href="#"><img alt="Flutter" src="https://img.shields.io/badge/app-Flutter-informational"></a>
-  <a href="#"><img alt="LLM" src="https://img.shields.io/badge/LLM-OpenAI%20gpt--3.5--turbo-6C63FF"></a>
-  <a href="#"><img alt="License" src="https://img.shields.io/badge/license-TBD-lightgrey"></a>
-</p>
+# Windows Command Prompt
+venv\Scripts\activate.bat
 
-> **“2025 서울 우먼테크 해커톤” 우다다 팀의 아이바(Aiva) 앱 서비스 저장소입니다.**  
-> 팀명: **우다다**  
-> 팀원: **최문경**(팀장/기획/디자인), **이다영**(백엔드), **김예진**(프론트엔드/앱·AI)
+# Linux/Mac
+source venv/bin/activate
+```
 
----
+### 2. 의존성 설치
+```bash
+pip install -r requirements.txt
+pip install fastapi uvicorn openai python-dotenv
+```
 
-## 목차
-- [소개](#소개)
-- [주요 기능](#주요-기능)
-- [AI 서비스](#ai-서비스)
-- [시스템 아키텍처](#시스템-아키텍처)
-- [환경 변수](#환경-변수)
-- [API 개요](#api-개요)
-- [폴더 구조(예시)](#폴더-구조예시)
-- [문의](#문의)
+### 3. 환경 변수 설정
+`.env` 파일을 생성하고 OpenAI API 키를 설정하세요:
+```
+OPENAI_API_KEY=your_openai_api_key_here
+```
 
----
+### 4. FastAPI 서버 실행
+```bash
+# 방법 1: uvicorn 직접 실행
+uvicorn server:app --host 0.0.0.0 --port 8000 --reload
 
-## 소개
-아이바(Aiva)는 **육아 정보를 즉시·정확하게** 제공하는 **AI 기반 육아 비서**입니다.  
-대화형 UI로 부모의 고민을 이해하고, 신뢰 가능한 자료와 컨텍스트를 바탕으로 개인화된 조언을 제공합니다.
+# 방법 2: Python 스크립트 실행
+python run_server.py
+```
 
----
+### 5. Flutter 앱과 연동
+1. FastAPI 서버가 실행 중인지 확인
+2. Flutter 앱 실행: `flutter run`
+3. 앱에서 채팅 기능 사용
 
-## 주요 기능
-**APP service**
-1. **홈 화면**: Aiva AI와 대화하고, **대화 기록**을 확인하여 연속 맥락으로 조언을 받습니다.  
-2. **커뮤니티**: 다른 사용자의 글과 **육아/정책 배너**를 통해 정보를 공유·확인합니다.  
-3. **마이페이지**: 사용자/자녀 정보를 등록·수정하여 **개인화 품질**을 높입니다.
+## API 엔드포인트
 
----
+- `GET /` - 서버 상태 확인
+- `POST /chat` - AI 채팅 API
+  - Request: `{"message": "사용자 메시지"}`
+  - Response: `{"response": "AI 응답"}`
 
-## AI 서비스
-**AI service**
-- **모델**: OpenAI `gpt-3.5-turbo` 사용  
-- **생성 방식**: RAG(검색 증강 생성) + **few-shot 예시 기반 질의 유사도 검색** 후 답변 생성  
-- (선택) **출처 표시** 및 **대화 요약** 기능 확장 가능
+## 프로젝트 구조
+```
+test01/
+├── venv/           # Python 가상환경
+├── server.py       # FastAPI 서버
+├── run_server.py   # 서버 실행 스크립트
+├── chat_app.py     # 콘솔 채팅 앱
+├── requirements.txt # 패키지 의존성
+├── .env            # 환경 변수
+└── README.md       # 프로젝트 설명
+```
 
-> 추후 모델/세부 파이프라인은 쉽게 교체할 수 있도록 모듈화되어 있습니다. (*예: `MODEL` 환경변수 변경*)
+## Flutter 앱 연동
 
----
+Flutter 앱(`aiva_app`)은 `http://10.0.2.2:8000` 주소로 FastAPI 서버에 연결됩니다.
 
-## 시스템 아키텍처
-
-<p align="center">
-  <img width="2525" height="774" alt="aiva server architecture drawio" src="https://github.com/user-attachments/assets/45ac2b1a-7e93-45b3-ad5a-e95c4f089062" />
-</p>
-
----
-
-## 폴더-구조예시
-
-<a><src="https://github.com/yejinKIM702/Aiva/yejinKIM702-patch-1.git">AIVA APP 프로젝트 구조도(트리)</a>
-
+- Android 에뮬레이터: `10.0.2.2:8000`
+- 실제 디바이스: 실제 서버 IP 주소로 변경 필요 
