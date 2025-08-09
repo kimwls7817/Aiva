@@ -1,28 +1,73 @@
-# 당신의 육아비서 - 아이바(Aiva)
+# 아이바(Aiva) — 당신의 육아비서
 
-<img width="300" height="300" alt="aiva_name_image" src="https://github.com/user-attachments/assets/a3886fda-f091-42ae-94ac-6cbcdf98f89f" />
-<img width="500" height="500" alt="aiva_logo" src="https://github.com/user-attachments/assets/74de9561-abea-4c44-8c40-6f35fb7a5fc9" />
+<p align="center">
+  <img width="300" height="300" alt="aiva_name_image" src="https://github.com/user-attachments/assets/a3886fda-f091-42ae-94ac-6cbcdf98f89f" />
+  <br/>
+  <img width="500" height="500" alt="aiva_logo" src="https://github.com/user-attachments/assets/74de9561-abea-4c44-8c40-6f35fb7a5fc9" />
+</p>
 
+<p align="center">
+  <a href="#"><img alt="Status" src="https://img.shields.io/badge/status-alpha-blue"></a>
+  <a href="#"><img alt="Hackathon" src="https://img.shields.io/badge/2025%20Seoul%20WomenTech-우다다-ff69b4"></a>
+  <a href="#"><img alt="Flutter" src="https://img.shields.io/badge/app-Flutter-informational"></a>
+  <a href="#"><img alt="LLM" src="https://img.shields.io/badge/LLM-OpenAI%20gpt--3.5--turbo-6C63FF"></a>
+  <a href="#"><img alt="License" src="https://img.shields.io/badge/license-TBD-lightgrey"></a>
+</p>
 
-## "2025 서울 우먼테크 해커톤의 [우다다]팀의 아이바(Aiva) 앱서비스 관련 페이지입니다. "
+> **“2025 서울 우먼테크 해커톤” 우다다 팀의 아이바(Aiva) 앱 서비스 저장소입니다.**  
+> 팀명: **우다다**  
+> 팀원: **최문경**(팀장/기획/디자인), **이다영**(백엔드), **김예진**(프론트엔드/앱·AI)
 
-팀명: 우다다
+---
 
-팀원: 최문경(팀장/기획/디자인), 이다영(백엔드개발), 김예진(프론트엔드/앱개발, ai개발)
+## 목차
+- [소개](#소개)
+- [주요 기능](#주요-기능)
+- [AI 서비스](#ai-서비스)
+- [시스템 아키텍처](#시스템-아키텍처)
+- [스크린샷](#스크린샷)
+- [빠른 시작](#빠른-시작)
+- [환경 변수](#환경-변수)
+- [API 개요](#api-개요)
+- [폴더 구조(예시)](#폴더-구조예시)
+- [로드맵](#로드맵)
+- [개인정보·면책](#개인정보면책)
+- [기여 방법](#기여-방법)
+- [라이선스](#라이선스)
+- [문의](#문의)
 
-----------
+---
 
-### 아이바 앱 설명: APP service
+## 소개
+아이바(Aiva)는 **육아 정보를 즉시·정확하게** 제공하는 **AI 기반 육아 비서**입니다.  
+대화형 UI로 부모의 고민을 이해하고, 신뢰 가능한 자료와 컨텍스트를 바탕으로 개인화된 조언을 제공합니다.
 
-[MIAN Fuctions]
+---
 
-1. 홈화면: aiva ai와 대화 및 대화 기록에 대한 확인을 통해 육아 정보를 받을 수 있습니다. 
-2. 커뮤니티 화면: 다른 유저들의 글과 육아 관련 정책 내용을 확인하는 배너를 통해 정보를 공유하거나 받을 수 있습니다. 
-3. 마이페이지: 사용자와 사용자 자녀에 대한 정보를 확인 및 수정할 수 있습니다.
+## 주요 기능
+**APP service**
+1. **홈 화면**: Aiva AI와 대화하고, **대화 기록**을 확인하여 연속 맥락으로 조언을 받습니다.  
+2. **커뮤니티**: 다른 사용자의 글과 **육아/정책 배너**를 통해 정보를 공유·확인합니다.  
+3. **마이페이지**: 사용자/자녀 정보를 등록·수정하여 **개인화 품질**을 높입니다.
 
-----------
+---
 
-### 아이바 AI 설명: AI service
+## AI 서비스
+**AI service**
+- **모델**: OpenAI `gpt-3.5-turbo` 사용  
+- **생성 방식**: RAG(검색 증강 생성) + **few-shot 예시 기반 질의 유사도 검색** 후 답변 생성  
+- (선택) **출처 표시** 및 **대화 요약** 기능 확장 가능
 
-1. API: OpenAI의 api인 gpt-3.5-turbo 모델을 이용합니다.
-2. RAG(검색증강생성) 방식의 LLM모델로 few-shot파일을 기반으로 유사한 내용을 검색하여 답변을 생성합니다. 
+> 추후 모델/세부 파이프라인은 쉽게 교체할 수 있도록 모듈화되어 있습니다. (*예: `MODEL` 환경변수 변경*)
+
+---
+
+## 시스템 아키텍처
+```mermaid
+flowchart LR
+  U[사용자] -->|텍스트/음성| A[Flutter App]
+  A -->|HTTP/SSE| B[백엔드 (예: FastAPI)]
+  B -->|임베딩 쿼리| V[(Vector DB)]
+  B -->|프롬프트/완성 요청| O[OpenAI API]
+  V --> B
+  B -->|응답 스트리밍/완료| A --> U
