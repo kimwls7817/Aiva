@@ -10,7 +10,7 @@
 
 ----------
 
-### 아이바 앱 설명
+### 아이바 앱 설명: APP service
 
 [MIAN Fuctions]
 
@@ -20,7 +20,7 @@
 
 ----------
 
-### 아이바 AI 설명
+### 아이바 AI 설명: AI service
 
 1. API: OpenAI의 api인 gpt-3.5-turbo 모델을 이용합니다.
 2. RAG(검색증강생성) 방식의 LLM모델로 few-shot파일을 기반으로 유사한 내용을 검색하여 답변을 생성합니다. 
