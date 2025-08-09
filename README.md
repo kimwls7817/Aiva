@@ -4,7 +4,7 @@
 <img width="500" height="500" alt="aiva_logo" src="https://github.com/user-attachments/assets/74de9561-abea-4c44-8c40-6f35fb7a5fc9" />
 
 
-## 2025 서울 우먼테크 해커톤의 [우다다]팀의 아이바(Aiva) 앱서비스 관련 페이지입니다. 
+## "2025 서울 우먼테크 해커톤의 [우다다]팀의 아이바(Aiva) 앱서비스 관련 페이지입니다. "
 
 팀명: 우다다
 
