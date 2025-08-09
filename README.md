@@ -33,7 +33,7 @@
 - [시스템 아키텍처](#시스템-아키텍처)
 - [환경 변수](#환경-변수)
 - [API 개요](#api-개요)
-- [앱폴더 구조](#폴더-구조예시)
+- [앱폴더 구조](#앱폴더-구조예시)
 - [문의](#문의)
 
 ---
@@ -70,7 +70,7 @@
 
 ---
 
-## 폴더-구조예시
+## 앱앱폴더-구조예시
 <img width="435" height="198" alt="image" src="https://github.com/user-attachments/assets/dcde9ee9-c83d-4719-9400-d15740cfd954" /></br>
 <img width="437" height="253" alt="image" src="https://github.com/user-attachments/assets/3a395d84-52ae-4863-8a88-a4b213aa9798" /></br>
 <img width="436" height="287" alt="image" src="https://github.com/user-attachments/assets/9a96d0de-76ad-4a23-81af-97f2195bc2a0" /></br>
