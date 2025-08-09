@@ -1,0 +1,154 @@
+aiva_app/
+├── aiva_app.iml
+├── analysis_options.yaml
+├── pubspec.yaml
+├── pubspec.lock
+├── README.md
+├── assets/
+│   ├── icons/
+│   │   ├── google.png
+│   │   ├── kakao.png
+│   │   └── user.png
+│   ├── image/
+│   └── images/
+│       ├── aiva_logo.png
+│       └── aiva_name_image.png
+├── lib/
+│   ├── main.dart
+│   ├── screens/
+│   │   ├── alarm/
+│   │   │   └── notifications_screen.dart
+│   │   ├── chat_screen.dart
+│   │   ├── community_screen.dart
+│   │   ├── home_screen.dart
+│   │   ├── my_page_screen.dart
+│   │   ├── post/
+│   │   │   └── new_post_screen.dart
+│   │   ├── profile_management_screen.dart
+│   │   ├── signup/
+│   │   │   ├── … (5개 .dart 파일)
+│   │   ├── splash_screen.dart
+│   │   └── welcome_screen.dart
+│   ├── services/
+│   └── widgets/
+│       ├── nav_bar.dart
+│       └── sidebar_drawer.dart
+├── android/
+│   ├── aiva_app_android.iml
+│   ├── app/
+│   │   ├── build.gradle
+│   │   └── src/
+│   │       ├── debug/            (Android XML 1개)
+│   │       ├── main/             (XML 5, PNG 5, Java 1 등)
+│   │       └── profile/          (XML 1개)
+│   ├── build.gradle
+│   ├── gradle/
+│   │   └── wrapper/
+│   │       ├── gradle-wrapper.jar
+│   │       └── gradle-wrapper.properties
+│   ├── gradle.properties
+│   ├── gradlew
+│   ├── gradlew.bat
+│   ├── local.properties
+│   └── settings.gradle
+├── ios/
+│   ├── Flutter/
+│   │   ├── AppFrameworkInfo.plist
+│   │   ├── Debug.xcconfig
+│   │   ├── Generated.xcconfig
+│   │   ├── Release.xcconfig
+│   │   └── flutter_export_environment.sh
+│   ├── Runner/
+│   │   ├── AppDelegate.swift
+│   │   ├── Assets.xcassets/
+│   │   │   ├── AppIcon.appiconset/ (PNG 15, JSON 1)
+│   │   │   └── LaunchImage.imageset/ (PNG 3, MD 1, JSON 1)
+│   │   ├── Base.lproj/
+│   │   │   ├── LaunchScreen.storyboard
+│   │   │   └── Main.storyboard
+│   │   ├── GeneratedPluginRegistrant.h
+│   │   ├── GeneratedPluginRegistrant.m
+│   │   ├── Info.plist
+│   │   ├── Runner-Bridging-Header.h
+│   │   └── RunnerTests/ (RunnerTests.swift)
+│   ├── Runner.xcodeproj/
+│   │   ├── project.pbxproj
+│   │   └── project.xcworkspace/
+│   │       ├── contents.xcworkspacedata
+│   │       └── xcshareddata/ (xcsettings/plist)
+│   └── Runner.xcworkspace/
+│       ├── contents.xcworkspacedata
+│       └── xcshareddata/ (IDEWorkspaceChecks.plist, WorkspaceSettings.xcsettings)
+├── macos/
+│   ├── Flutter/
+│   │   ├── Flutter-Debug.xcconfig
+│   │   ├── Flutter-Release.xcconfig
+│   │   ├── GeneratedPluginRegistrant.swift
+│   │   └── ephemeral/
+│   │       ├── Flutter-Generated.xcconfig
+│   │       └── flutter_export_environment.sh
+│   ├── Runner/
+│   │   ├── AppDelegate.swift
+│   │   ├── Assets.xcassets/ (PNG 7, JSON 1)
+│   │   ├── Base.lproj/MainMenu.xib
+│   │   ├── Configs/ (xcconfig 4)
+│   │   ├── DebugProfile.entitlements
+│   │   ├── Info.plist
+│   │   ├── MainFlutterWindow.swift
+│   │   └── Release.entitlements
+│   ├── Runner.xcodeproj/ (project files)
+│   └── Runner.xcworkspace/ (workspace files)
+├── windows/
+│   ├── CMakeLists.txt
+│   ├── flutter/
+│   │   ├── CMakeLists.txt
+│   │   ├── generated_plugin_registrant.cc
+│   │   ├── generated_plugin_registrant.h
+│   │   └── generated_plugins.cmake
+│   └── runner/
+│       ├── CMakeLists.txt
+│       ├── flutter_window.cpp/h
+│       ├── main.cpp
+│       ├── resource.h
+│       ├── resources/ (app_icon.ico)
+│       ├── runner.exe.manifest
+│       ├── Runner.rc
+│       ├── utils.cpp/h
+│       └── win32_window.cpp/h
+├── linux/
+│   ├── CMakeLists.txt
+│   ├── flutter/
+│   │   ├── CMakeLists.txt
+│   │   ├── generated_plugin_registrant.cc/h
+│   │   └── generated_plugins.cmake
+│   ├── main.cc
+│   ├── my_application.cc/h
+├── web/
+│   ├── favicon.png
+│   ├── icons/
+│   │   ├── Icon-192.png
+│   │   ├── Icon-512.png
+│   │   ├── Icon-maskable-192.png
+│   │   └── Icon-maskable-512.png
+│   ├── index.html
+│   └── manifest.json
+├── build/
+│   ├── cache.dill.track.dill
+│   ├── e57df1efcc960e9d404dcd42c0e2e7a8/
+│   │   ├── _composite.stamp
+│   │   ├── gen_dart_plugin_registrant.stamp
+│   │   └── gen_localizations.stamp
+│   └── flutter_assets/
+│       ├── AssetManifest.bin(.json)
+│       ├── AssetManifest.json
+│       ├── assets/
+│       │   ├── icons/ (3 PNG)
+│       │   └── images/ (1 PNG)
+│       ├── FontManifest.json
+│       ├── fonts/ (MaterialIcons-Regular.otf)
+│       ├── NOTICES
+│       ├── packages/
+│       │   └── cupertino_icons/ (ttf 1)
+│       └── shaders/ (ink_sparkle.frag)
+└── test/
+    └── widget_test.dart
