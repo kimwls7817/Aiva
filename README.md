@@ -31,6 +31,7 @@
 - [주요 기능](#주요-기능)
 - [AI 서비스](#ai-서비스)
 - [시스템 아키텍처](#시스템-아키텍처)
+- [ERD](#ERD)
 - [환경 변수](#환경-변수)
 - [API 개요](#api-개요)
 - [앱폴더 구조](#앱폴더-구조예시)
@@ -68,6 +69,14 @@
 
 <p align="center">
   <img width="2525" height="774" alt="aiva server architecture drawio" src="https://github.com/user-attachments/assets/45ac2b1a-7e93-45b3-ad5a-e95c4f089062" />
+</p>
+
+---
+
+## ERD
+
+<p align="center">
+  <img width="2991" height="2229" alt="aiva_ERD" src="https://github.com/user-attachments/assets/d16fc7c5-a4a9-43d5-891d-08e265722be8" />
 </p>
 
 ---
